@@ -21,6 +21,9 @@ statusDisplay.textContent = 'Choose!';
 
 
 
+
+
+
 function calcResult(move1, move2) {
     randomMove()
     if(move1 === move2){
@@ -60,14 +63,14 @@ function startGame(playerchoice) {
     statusDisplay.textContent = result;
 
     if ((result === winMsg) || (result === loseMsg) || (result === tieMsg)){
-        // rockButton.style.display = 'none';
-        // paperButton.style.display = 'none';
-        // scissorButton.style.display = 'Play Again';
+        rockButton.style.display = 'none';
+        paperButton.style.display = 'none';
+        scissorButton.style.display = 'Play Again';
         scissorButton.addEventListener('click', resetGame);
 
-        buttons[0].style.display = 'none';
-        buttons[1].style.display = 'none';
-        buttons[2].textContent = 'Play Again';
+        // buttons[0].style.display = 'none';
+        // buttons[1].style.display = 'none';
+        // buttons[2].textContent = 'Play Again';
     }
 
 
